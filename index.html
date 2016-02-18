@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>文本无缝滚动</title>
+	<style>
+
+		*{margin: 0; padding: 0;}
+		ul, li{list-style: none;}
+		.box{ width: 200px; height: 200px; overflow: hidden; margin-bottom: 20px;}
+		.box li{padding: 0 10px; height: 40px; line-height: 40px;}
+		
+		.box2{position: relative; width: 400px; height: 40px; overflow: hidden; margin-bottom: 20px;}
+		.box2 ul{position: absolute; width: 8000%; overflow: hidden;}
+		.box2 li{float: left; padding: 0 10px; height: 40px; line-height: 40px;}
+
+	</style>
+</head>
+<body>
+
+	<h2>向上：</h2>
+	<ul class="box" id="box1">
+		<li>111111111111111111111</li>
+		<li>222222222222222222222</li>
+		<li>333333333333333333333</li>
+		<li>444444444444444444444</li>
+		<li>555555555555555555555</li>
+		<li>666666666666666666666</li>
+		<li>777777777777777777777</li>
+		<li>888888888888888888888</li>
+		<li>999999999999999999999</li>
+	</ul>
+
+	<h2>向下：</h2>
+	<ul class="box" id="box2">
+		<li>111111111111111111111</li>
+		<li>222222222222222222222</li>
+		<li>333333333333333333333</li>
+		<li>444444444444444444444</li>
+		<li>555555555555555555555</li>
+		<li>666666666666666666666</li>
+		<li>777777777777777777777</li>
+		<li>888888888888888888888</li>
+		<li>999999999999999999999</li>
+	</ul>
+	
+	<h2>向左：</h2>
+	<div class="box2">
+		<ul id="box3">
+			<li>111111111111111111111</li>
+			<li>222222222222222222222</li>
+			<li>333333333333333333333</li>
+			<li>444444444444444444444</li>
+			<li>555555555555555555555</li>
+			<li>666666666666666666666</li>
+			<li>777777777777777777777</li>
+			<li>888888888888888888888</li>
+			<li>999999999999999999999</li>
+		</ul>
+	</div>
+
+	<h2>向右：</h2>
+	<div class="box2">
+		<ul id="box4">
+			<li>111111111111111111111</li>
+			<li>222222222222222222222</li>
+			<li>333333333333333333333</li>
+			<li>444444444444444444444</li>
+			<li>555555555555555555555</li>
+			<li>666666666666666666666</li>
+			<li>777777777777777777777</li>
+			<li>888888888888888888888</li>
+			<li>999999999999999999999</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="textScroll.js"></script>
+	<script type="text/javascript">
+
+		textScroll('box1', {
+			// direction: 'top',
+			speed: 2
+		});
+
+		textScroll('box2', {
+			direction: 'bottom',
+			speed: 2
+		});
+
+		textScroll('box3', {
+			direction: 'left',
+			speed: 2
+		});
+
+		textScroll('box4', {
+			direction: 'right',
+			speed: 2
+		});
+
+	</script>
+
+</body>
+</html>
